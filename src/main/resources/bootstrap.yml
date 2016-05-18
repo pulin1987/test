@@ -1,0 +1,13 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+      hostname: eureka-server
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://172.16.1.240:8761/eureka/
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
