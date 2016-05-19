@@ -7,24 +7,8 @@
                 http://www.springframework.org/schema/data/mongo 
                 http://www.springframework.org/schema/data/mongo/spring-mongo.xsd">
 
-    <!--<mongo:mongo id="replicaSetMongo" replica-set="dds-bp1c359e21a920441.mongodb.rds.aliyuncs.com:3717,dds-bp1c359e21a920442.mongodb.rds.aliyuncs.com:3717">
-        <mongo:options slave-ok="true" />&lt;!&ndash; 读写分离 &ndash;&gt;
-    </mongo:mongo>-->
-
-    <mongo:mongo id="replicaSetMongo"  replica-set="dds-bp1c359e21a920441.mongodb.rds.aliyuncs.com:3717,dds-bp1c359e21a920442.mongodb.rds.aliyuncs.com:3717">
-        <mongo:options connections-per-host="200"
-                       threads-allowed-to-block-for-connection-multiplier="100"
-                       connect-timeout="1000"
-                       max-wait-time="1500"
-                       auto-connect-retry="true"
-                       socket-keep-alive="true"
-                       socket-timeout="1500"
-                       slave-ok="true"
-                       write-number="1"
-                       write-timeout="0"
-                       write-fsync="true"
-
-                        />
+    <mongo:mongo id="replicaSetMongo" replica-set="dds-bp1c359e21a920441.mongodb.rds.aliyuncs.com:3717,dds-bp1c359e21a920442.mongodb.rds.aliyuncs.com:3717">
+        <mongo:options slave-ok="true" /><!-- 读写分离 -->
     </mongo:mongo>
 
     <!-- Sets up a Mongo DB instance. Configure host, port and credentials if needed. -->

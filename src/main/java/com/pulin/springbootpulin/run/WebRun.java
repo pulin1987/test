@@ -79,7 +79,7 @@ public class WebRun {
 		BasicDBObject dbObject = new BasicDBObject();
 		dbObject.append("_id",new ObjectId("573c39d11212a6eb0f6dc025"));
 		dbObject.append("source",4);
-		DBCursor dbCursor = mongoTemplate.getDb().getCollection("order").find(dbObject);
+		DBCursor dbCursor = mongoTemplate.getDb().getCollection("order").find(dbObject);//.readConcern("majority");
 		while(dbCursor.hasNext()){
 			String json = JSON.toJSON(dbCursor.next()).toString();
 			System.out.println(json);
