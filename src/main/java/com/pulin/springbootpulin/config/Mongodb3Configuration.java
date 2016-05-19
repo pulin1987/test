@@ -14,6 +14,8 @@ import org.springframework.data.mongodb.core.SimpleMongoDbFactory;
 
 import java.util.Arrays;
 
+//http://stackoverflow.com/
+//http://www.programcreek.com
 //http://www.programcreek.com/java-api-examples/index.php?api=org.springframework.data.authentication.UserCredentials
 @Configuration
 public class Mongodb3Configuration {
