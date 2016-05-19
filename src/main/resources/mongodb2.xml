@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
        			http://www.springframework.org/schema/beans/spring-beans.xsd
                 http://www.springframework.org/schema/data/mongo 
-                http://www.springframework.org/schema/data/mongo/spring-mongo.xsd">
+                http://www.springframework.org/schema/data/mongo/spring-mongo-1.1.xsd">
 
     <mongo:mongo id="replicaSetMongo" replica-set="dds-bp1c359e21a920441.mongodb.rds.aliyuncs.com:3717,dds-bp1c359e21a920442.mongodb.rds.aliyuncs.com:3717">
         <mongo:options slave-ok="true" /><!-- 读写分离 -->

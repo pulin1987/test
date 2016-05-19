@@ -11,6 +11,7 @@ import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -30,7 +31,7 @@ import java.util.TreeMap;
 
 @Controller
 //@EnableAutoConfiguration
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class,MongoDataAutoConfiguration.class})
 //@EnableZuulProxy
 @ComponentScan("com.pulin")//组件扫描
 @EnableDiscoveryClient
