@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx 
+	    http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+   
+   
+    <bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory" lazy-init="true">
+        <property name="brokerURL" value="${datasource.jms.broker.url}"/>
+        <property name="messagePrioritySupported" value="false"/>
+    </bean>
+
+    <bean id="cachingConnectionFactory" class="org.springframework.jms.connection.CachingConnectionFactory" >
+        <property name="targetConnectionFactory" ref="connectionFactory"/>
+        <property name="sessionCacheSize" value="10"/>
+    </bean> 
+    
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="cachingConnectionFactory"/>
+    </bean>
+    
+    <bean id="notifyQueue" class="org.apache.activemq.command.ActiveMQQueue" >
+        <constructor-arg value="notifyQueue"/>
+    </bean>
+ 	<bean id="queueConsumerListener" class="com.pulin.springbootpulin.jms.QueueConsumerListener" />
+    
+    <bean id="jmsListenerThreadFactoryBean" class="com.pulin.springbootpulin.jms.JmsListenerThreadFactoryBean" />
+    
+    <bean class="org.springframework.jms.listener.DefaultMessageListenerContainer" lazy-init="false">
+        <property name="connectionFactory" ref="connectionFactory"/>
+        <property name="destination" ref="notifyQueue"/>
+        <property name="messageListener" ref="queueConsumerListener"/>
+        <property name="concurrentConsumers" value="1"/> 
+        <property name="maxConcurrentConsumers" value="50"/>
+        <property name="concurrency" value="1-50"></property> 
+        <property name="taskExecutor"  ref="jmsListenerThreadFactoryBean"></property>
+    </bean>  
+ 
+    
+</beans>

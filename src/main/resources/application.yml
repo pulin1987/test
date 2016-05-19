@@ -1,0 +1,17 @@
+server:
+  port: 8999
+
+spring:
+  application:
+    name: pulin
+  cloud:
+    config:
+      uri: http://121.196.227.122:8761/
+#debug: true
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://121.196.227.122:8761/eureka/
