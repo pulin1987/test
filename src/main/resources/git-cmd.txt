@@ -1,0 +1,208 @@
+﻿grep -r 'sfrom' *.*                        mini USB  micro USB
+ls -lart catalina.out
+more catalina.out
+grep -r 'ReportService.queryReportShop.info' *.*
+tac catalina.out | grep -r "810004919" | grep ""  more
+cat catalina.out | grep "notifyDianPing push request" | more
+
+eclipse中运行jetty Goals配置
+jetty:run -Djetty.port=8110
+jetty:run -Djetty.port=80
+
+jetty:run -Djetty.port=8088 -Dmaven.test.skip=true
+mvn deploy  -Dmaven.test.skip=true
+mvn clean package -Dmaven.test.skip=true
+clean package -Dmaven.test.skip=true install -U
+
+http://mahua.jser.me/ markdown在线编辑器
+
+http://gitlab.shishike.com/tany/partner-api-doc/wikis/git-cmd
+http://gitlab.shishike.com/groups/c-h5
+http://gitlab.shishike.com/
+
+https://tower.im/users/sign_in
+https://tower.im/
+http://180.76.143.237:8094/jenkins/ 项目管理jenkins地址 pul pul123
+
+ermaster  eclipse插件 查看数据ER图结构 
+
+http://keruyun.yunxuetang.cn/sty/index.htm 云学堂
+
+http://api.waimai.baidu.com/openapi/doc  百度外卖接口文档地址
+
+禅道项目管理
+http://zentao.shishike.com/index.php?m=company&f=browse   pul pul321
+
+http://gitlab.shishike.com/c-h5/partner/wikis/dish_old 老菜品数据库
+
+ssh 用户名 密码
+work Ssk0325kRy19
+
+通行短语
+OPAx9hqEUC2wVE2O
+
+121.199.37.239  (aliyun ch5 product2) 
+42.121.105.59    (aliyun ch5 product)
+正式服务器不能直接用work帐号登录了，必须要用密钥登录，然后su - work 端口号：38401 帐号：ssk.chenlh 密码：OPAx9hqEUC2wVE2O 附件是密钥文件
+
+weixin正式环境，加了一个tomcat，如下
+IP：112.124.56.5
+tomcat：/alidata/server/weixin
+私钥和密码用以前正式环境的：ssk.chenlh
+登录成功后su到work帐号
+work密码：Ssk0325kRy19
+以后看weixin正式环境的日志在59和239、5三台服务器上看
+
+以后看weixin正式环境的日志在59和239、5三台服务器上看
+
+免费版本控制
+https://bitbucket.org/
+pulin1987
+plly1987
+273471249@qq.com
+http://tortoisehg.bitbucket.org/download/index.html
+
+阿里云开发环境mongodb地址
+
+http://jenkins.shishike.com/jenkins
+
+
+生产环境数据库连接配置：
+master:
+shishikef.mysql.rds.aliyuncs.com
+3008
+ssk_h5
+shishike123
+
+ssh:
+120.26.53.156
+work
+38401
+私钥验证(53.156.id_rsa)
+kryNB
+
+salve:
+rdsymjy6nfjivbu.mysql.rds.aliyuncs.com
+rdsymjy6nfjivbu.mysql.rds.aliyuncs.com
+3306
+shishike
+shishike123
+
+ssh:
+120.26.53.156
+work
+38401
+私钥验证(53.156.id_rsa)
+
+通行短语
+kryNB
+
+
+##################
+ssh
+115.29.243.165
+用户名 work
+密码  shishike123
+38401
+##################
+
+消息服务线上地址：
+42.120.32.10
+端口 38401
+用户名 ssk.chenlh
+公钥验证
+
+112.124.3.2
+端口 38401
+用户名 ssk.chenlh
+公钥验证
+
+
+测试，联调，灰度，生产环境汇总
+https://tower.im/projects/af99e92345b6418cb22715d48c139e59/docs/59481c6864644409825a6093f35849e5/
+
+  新环境下 测试服务器 只读帐号：   
+        121.43.115.106   develop  /  gU0SnDJoEDxM 
+
+  联调环境下    读写帐号：     
+ 
+       115.29.243.165    work  /  0GocZOy6LJybG5u9uH 
+ 
+注意转发给组内成员 
+
+
+虚拟机中的gitlab用户名密码
+616663643@qq.com
+plly987
+
+https://tower.im/projects/25e64dc9c2344590b8b6e590863710b0/dirs/c2dc23f5e48449f6b086339adcf701ed/ 发版奖分配明细
+
+120.55.119.23:8983/solr 生产环境solr访问地址
+
+redis配置： 主10.200.247.27:6379， 从10.160.51.233:6379
+auth callcenterredis
+将来可以考虑使用redis的哨兵，目前先使用简单的主从模式
+
+
+科鲁兹  福克斯   408  福睿斯  悦动  轩逸   K3  卡罗拉   朗动  菲翔 昂克赛拉
+
+开发环境数据库：
+host：rdst5ai4d32fe3qd6if46public.mysql.rds.aliyuncs.com
+port：3306
+database：calm_dev
+username：dev_calm_weixin
+password：Pz3d7G1Q5pfUOjFZWFyW
+
+开发环境数据库账号密码
+dev_stf_wt
+yk0GeXVTboygwmjymR5X
+
+生产环境读库账号密码 2015-12-25
+prd_stf_qry
+knSa4BvE58ZCiTfm
+
+watchdog  /   70JVxaVFWTN
+
+
+http://api.waimai.baidu.com/openapi/doc 
+百度外卖的开放平台 
+
+http://e.meituan.com/
+美团后台账号：dptesta82 840088
+
+
+idea注册地址 
+http://idea.qinxi1992.cn/
+
+百度外卖客如云测试门店地址
+http://waimai.baidu.com/waimai?qt=orderlist&type=wait&qq-pf-to=pcqq.discussion
+
+
+#微服务线上环境
+阿里云服务器：
+10.162.83.220 38401
+10.47.133.88 38401
+10.51.8.230  38401
+
+账号：ssk.logman
+private key：ssk.logman.rsa
+密码：qu9I_aWEbkbAFa
+日志目录：
+
+cd /home/ssk.logman/
+
+nginx日志系统：
+账号：logman   密码：WoAX3jaWc3bKIXprx-u_2snK     地址:http://signin.aliyun.com/   公司名：shishike
+
+
+美团外卖开发者平台，链接：http://developer.waimai.meituan.com/home#!/index
+账号：13651228836；
+密码：keruyun
+955d2565a81c1b89484edf9fd89c43f7
+
+
+vpn.pul  8h3ZhJvGG29A
+
+
+
+
