@@ -58,12 +58,6 @@ spring:
     zookeeper:
       connectString: 10.117.42.187:2181,10.161.175.124:2181,10.165.98.102:2181
 
----
-spring:
-  profiles: prod
-  cloud:
-    zookeeper:
-      connectString: zk1.keruyun.com:2181,zk2.keruyun.com:2181,zk3.keruyun.com:2181,zk4.keruyun.com:2181,zk5.keruyun.com:2181
 
 #禁用所有
 endpoints.enabled: false
